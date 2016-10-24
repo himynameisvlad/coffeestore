@@ -1,0 +1,119 @@
+doctype
+html(lang='ru')
+	block head
+		- var pageName = 'index'
+		- var pageTitle = "Чувство вкуса магазин"
+	include ../blocks/head/head
+	body#body.store-active
+		//- #desc-product__modal(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', class='modal fade')
+		//- 	div(role='document', class='modal-dialog modal-sm')
+		//- 		div(class='modal-content')
+		//- div(classname='desc-product__overlay')
+		a(href="#" id="store__trigger") Интернет магазин
+
+		.store
+			.store__container
+				.store__outer#app
+					.store__side-cart
+						.store__shadow
+							.side-cart__content
+								h3.side-cart__title Корзина
+								ul.side-cart__list
+								.side-cart__total
+								a(href="#").side-cart__checkout Оформить заказ
+								.side-cart__cart
+									a(href="").side-cart__cart-link На страницу корзины
+					header.store__header.store-header
+						.container
+							.row
+								.col-sm-3
+									a(href="#" class="store-header__close") <i class="store-header__close--icon store-header__icon"></i> Вернуться на сайт
+								.col-sm-6
+									h3.store-header__title Интернет магазин
+								.col-sm-3
+									a(href="/cart.html" class="store-header__cart") <i class="store-header__cart--icon store-header__icon"></i> Корзина
+					.store__body
+						ul.store__list
+							li.store__screen.store__cats.cats
+								.container
+									.row
+										.cats__container.clearfix
+						.store__product.product.hidden(data-prod="")
+							.container
+								.row
+									.col-sm-4
+										.product__image
+											img(src="assets/images/cat2.jpg", alt="")
+										.product__descr
+											a(href="#") <i class="product__descr">?</i> Как правильно выбрать кофе
+									.col-sm-4
+										.product__type
+											h5.product__subtitle Выберите тип
+											ul.product__type-list.product__list
+												li.product__type-item.product__list-item.product__type-item--sev.active(data-type="2") <i class="product__type-check"></i> Смешать несколько сортов
+												li.product__type-item.product__list-item.product__type-item--one(data-type="1") <i class="product__type-check"></i> Один сорт
+												
+										.product__prop
+											h5.product__subtitle Выберите пропорции
+											ul.product__prop-list
+												li.product__prop-item.prop-item
+													.prop-item__title
+														h6 Бразилия Сантос
+														a(href="#") подробнее
+													.prop-item__opts
+														.prop-item__cust
+															.prop-item__minus -
+															span 0%
+															.prop-item__plus +
+												li.product__prop-item.prop-item
+													.prop-item__title
+														h6 Бразилия Сантос
+														a(href="#") подробнее
+													.prop-item__opts
+														.prop-item__cust
+															.prop-item__minus -
+															span 0%
+															.prop-item__plus +
+									.col-sm-3.col-sm-offset-1
+										.product__vol
+											h5.product__subtitle Выберите вес
+											.product__vol-window
+												span 500 г
+												ul.product__vol-list
+													li.product__vol-item 250
+													li.product__vol-item 500
+													li.product__vol-item 1000
+										.product__extra
+											h5.product__subtitle Выберите добавки
+											ul.product__extra-list.product__list
+												li.product__extra-item.product__list-item <i class="product__type-check"></i> Цедра апельсина
+												li.product__extra-item.product__list-item <i class="product__type-check"></i> Какао
+												li.product__extra-item.product__list-item <i class="product__type-check"></i> Корица
+										.product__mill
+											h5.product__subtitle Выберите помол
+											ul.product__mill-list.product__list
+												li.product__mill-item.product__list-item <i class="product__type-check"></i> Не молоть
+												li.product__mill-item.product__list-item <i class="product__type-check"></i> Для турки
+												li.product__mill-item.product__list-item <i class="product__type-check"></i> Для френчпресса
+
+
+				//- footer.store__footer.store-footer
+				//- 	.container
+				//- 		.row
+				//- 			.col-sm-6
+				//- 				.store-footer__total.hidden
+				//- 					h5.store-footer__title Итог
+				//- 					.store-footer__sum <span>0</span> руб
+				//- 			.col-sm-6
+				//- 				.store-footer__btns
+				//- 					a.store-footer__btn.store-footer__btn--back(href="#") 
+				//- 					a.store-footer__btn.store-footer__btn--next(href="#" data-page="0") <span>Продолжить</span><i class="store-footer__icon--next"></i>
+
+			
+
+		script(src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+		script(type='text/javascript' src='assets/scripts/sweetalert.min.js')
+		script(type='text/javascript' src='assets/scripts/build.js')
+		//script(type='text/javascript' src='http://localhost:8888/bundle.js')
+		script(type='text/javascript' src='public/4d700a62ae4d8c1fe495.js')

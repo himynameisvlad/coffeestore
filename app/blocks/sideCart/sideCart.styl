@@ -1,0 +1,171 @@
+.side-cart
+	will-change transform
+	transition visibility 0s 0.6s
+	width 100%
+	height 100%
+	visibility hidden
+	position fixed
+	top 0
+	left 0
+	z-index 1050
+	background: rgba(0, 0, 0, 0.6)
+	&.active
+		visibility visible
+		transition visibility 0s 0s
+		
+		.side-cart__content
+			transition transform .4s ease
+			transform translate(0, 0)
+	
+	&__content
+		background-color: #fff;
+		position: fixed
+		top: 0
+		right: 0
+		height: 100%
+		width: 350px
+		overflow-y: auto
+		-webkit-overflow-scrolling: touch
+		transition: right 0.3s
+		z-index: 4
+		transform translate(100%, 0)
+		will-change transform
+		transition transform .4s ease
+
+
+	&__title
+		padding: 20px
+		border-bottom: 1px solid #ebebeb
+	
+	&__list
+		margin-bottom 0
+	
+	&__item
+		display block
+		padding: 10px 20px
+		border-bottom: 1px solid #ebebeb
+		position: relative
+	
+	&__qty
+		color #bbb
+		margin-right 4px
+	
+	&__price
+		font-family: "Lato-Black", Arial, Tahoma, sans-serif
+		display block
+	
+	&__remove
+		position: absolute
+		right: 1em
+		top: 50%
+		bottom: auto
+		transform: translateY(-50%)
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		background: url(../images/remove-item.svg) no-repeat center center
+	
+	&__checkout
+		width: 100%
+		background-color: #3680d3
+		padding: 20px 0
+		display: block
+		color: #fff
+		text-align: center
+		&:hover
+			color #fff
+			text-decoration none
+	
+	&__cart
+		text-align center
+		padding-top 10px
+		
+		&-link:hover
+			text-decoration none
+	
+	&__total
+		padding 10px 20px
+		
+		p
+			margin 0
+		
+		span
+			float: right
+			font-family: "Lato-Black", Arial, Tahoma, sans-serif
+			font-size: 18px
+
+.cart
+	
+	
+	
+	&__empty
+		text-align center
+		
+		a
+			display block
+			text-align center
+	
+
+	&__item
+		padding 20px
+		border 2px solid #f3f3f3
+		border-radius 2px
+		margin-bottom 20px
+		position relative
+		
+		h6
+			font-size 16px
+			margin-bottom 6px
+	
+	&__title
+		text-align center
+		img
+			display block
+			width 90px
+			margin 0 auto 20px
+	
+	&__perc
+		float right
+		
+	&__mill
+	&__extra
+		padding-top 30px
+	
+	&__price
+		text-align right
+		
+		span
+			font-size 18px
+			color #969696
+			font-family: "Lato-Regular", Arial, Tahoma, sans-serif
+			display inline-block
+			line-height 2
+			position relative
+			margin-left 4px
+	
+	&__delete
+		position absolute
+		right 20px
+		bottom 10px
+
+
+.cart-item__qty
+	position absolute
+	display inline-block
+	background-image url('../images/sprite.png')
+	background-color transparent
+	outline 0
+	border 0
+	background-repeat no-repeat
+	width: 14px
+	height: 7px
+	left 12px
+	cursor pointer
+	&:focus
+		outline 0
+	&-more
+		background-position -35px -4px
+		top -6px
+	&-less
+		background-position -35px -24px
+		bottom -4px

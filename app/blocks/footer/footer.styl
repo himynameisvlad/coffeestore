@@ -1,0 +1,75 @@
+.store__footer
+  height: 110px
+  padding: 0 20px
+  position: fixed
+  z-index: 2
+  bottom: 0
+  left: 0
+  width: 100%
+  background: #ffffff
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08)
+  -webkit-transition: -webkit-transform .3s
+  transition: -webkit-transform .3s
+  transition: transform .3s
+  transition: transform .3s, -webkit-transform .3s
+.store-footer
+  &__total
+    padding-top: 30px
+  &__title
+    font-size: 18px
+    color: #6f6f6f
+    font-family: "Lato-Regular", Arial, Tahoma, sans-serif
+    margin-bottom: 2px
+  &__sum
+    font-size: 28px
+    color: #111111
+    font-family: "Lato-Black", Arial, Tahoma, sans-serif
+  &__btns
+    float: right
+    padding-top: 37px
+    width 300px
+    display flex
+    justify-content flex-end
+    clearfix()
+  &__btn
+    color #fff
+    display: inline-block
+    border-radius: 28px
+    background-color: #fff
+    //height: 40px
+    min-width 40px
+    position: relative
+    line-height 40px
+    &:hover
+    &:focus
+      color #fff
+      text-decoration none
+    & + a
+      margin-left: 8px
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 7px
+      height: 13px
+      background-image: url("../images/sprite.png")
+      background-repeat: no-repeat
+      top: 50%
+      margin-top: -6px
+    &--back
+      background-color: #ebeaea
+      width 40px
+      height 40px
+      &:after
+        background-position: 0 0
+        left: 50%
+        margin-left: -3px
+    &--next
+      background-color: #3b81f3
+      padding 0 60px 0 20px
+      width 230px
+      &:after
+        background-position: -19px 0
+        right 20px
+  &__extra
+    font-size 14px

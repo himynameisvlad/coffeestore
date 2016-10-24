@@ -1,0 +1,116 @@
+@import 'helpers/variables'
+@import 'helpers/sprites'
+@import 'helpers/mixins'
+
+@import '../blocks/header'
+@import '../blocks/sideCart'
+@import '../blocks/cats'
+@import '../blocks/product'
+@import '../blocks/footer'
+
+rupture.mobile-cutoff = $mobile-cutoff
+rupture.desktop-cutoff = $desktop-cutoff
+
+body.store-active
+	.store
+		visibility visible
+		transition visibility 0s 0s
+		&__container
+			transition transform .4s ease
+			transform translate(0, 0)
+
+.store
+	will-change transform
+	transition visibility 0s 0.6s
+	width 100%
+	height 100%
+	visibility hidden
+	position fixed
+	top 0
+	left 0
+	z-index 1050
+	
+	&__outer
+		position relative
+		overflow-y scroll
+		height 100%
+		width 100%
+		padding-bottom 130px
+	
+	&__body
+		padding 30px 0 0
+	
+	&__container
+		transform translate(-100%, 0)
+		will-change transform
+		transition transform .4s ease
+		background-color #fff
+		position fixed
+		top 0
+		left 0
+		right 0
+		width 100%
+		height 100%
+		clearfix()
+		
+	// &__list
+		
+
+	&__screen
+		display block
+		width 100%
+
+#desc-product__modal
+	.modal-sm
+		max-width 700px
+		
+		.modal-content
+			padding 30px 20px 30px
+			oveflow hidden
+		
+		iframe
+			display block
+			max-width 700px
+			margin 0 auto 30px
+			width 100%
+		
+		img
+			display block
+			margin 0 auto 30px
+
+#desc-grade__modal
+	.modal-content
+		padding 30px 20px 30px
+		oveflow hidden
+
+.desc-product__overlay
+	display none
+	background-color rgba(0, 0, 0, .25)
+	position fixed
+	top 0
+	left 0
+	right 0
+	bottom 0
+	z-index 99
+
+.store-active.modal-open
+	.desc-product__overlay
+		display block
+
+@keyframes cd-bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.3);
+  }
+}

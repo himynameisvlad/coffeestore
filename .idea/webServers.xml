@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="26766fbd-b83c-4a09-8955-a144fcb2fd6c" name="surf" url="http://surfhostel.myjino.ru">
+        <fileTransfer host="surfhostel.myjino.ru" port="21" password="dfccdfc9dfccdfcedfd8dfccdfdcdfccdf9bdf98df99" username="surfhostel_vlad">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
